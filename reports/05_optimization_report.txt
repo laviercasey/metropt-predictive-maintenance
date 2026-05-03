@@ -1,0 +1,57 @@
+======================================================================
+ОТЧЁТ: ОПТИМИЗАЦИЯ МОДЕЛЕЙ
+======================================================================
+
+СРАВНЕНИЕ РЕЗУЛЬТАТОВ:
+
+  GradBoosting (базовый):
+    roc_auc                   = 0.9821
+    pr_auc                    = 0.5853
+    f1                        = 0.2313
+    recall                    = 0.1314
+    precision                 = 0.9659
+    balanced_acc              = 0.5656
+
+  GradBoosting (опт. порог):
+    roc_auc                   = 0.9821
+    pr_auc                    = 0.5853
+    f1                        = 0.7402
+    recall                    = 0.949
+    precision                 = 0.6067
+    balanced_acc              = 0.9652
+
+  GradBoosting (оптимизированный):
+    roc_auc                   = 0.9934
+    pr_auc                    = 0.8893
+    f1                        = 0.0184
+    recall                    = 0.0093
+    precision                 = 1.0
+    balanced_acc              = 0.5046
+
+  GradBoosting (опт. + порог):
+    roc_auc                   = 0.9934
+    pr_auc                    = 0.8893
+    f1                        = 0.8778
+    recall                    = 0.8825
+    precision                 = 0.8731
+    balanced_acc              = 0.9393
+
+  GradBoosting (feat.sel.):
+    roc_auc                   = 0.9925
+    pr_auc                    = 0.8384
+    f1                        = 0.8712
+    recall                    = 0.8779
+    precision                 = 0.8645
+    balanced_acc              = 0.9369
+
+ЛУЧШИЕ ГИПЕРПАРАМЕТРЫ (GradientBoosting):
+  subsample: 0.6
+  n_estimators: 300
+  min_samples_leaf: 1
+  max_features: log2
+  max_depth: 8
+  learning_rate: 0.05
+
+ОПТИМАЛЬНЫЙ ПОРОГ КЛАССИФИКАЦИИ (по PR-кривой на test): 0.0000
+
+======================================================================
